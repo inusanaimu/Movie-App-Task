@@ -1,25 +1,27 @@
-import Li from '../UI/Li'
+import React, { useEffect } from 'react'
+
+import Btn from '../UI/Btn'
 
 import data from '../../data'
 const movies = data
 
 const MovieList = ({ movieOnPreview }) => {
-  const handleClick = (movie) => {
-    movieOnPreview(movie)
-  }
+  useEffect(() => {
+    movieOnPreview(movies[0])
+  }, [0])
+
   return (
     <>
       <div> Movie List</div>
-      <ul>
+      <div>
         {movies.map((movie) => {
-          // console.log(movie)
           return (
-            <span onClick={handleClick}>
-              <Li>{movie.title}</Li>
-            </span>
+            <Btn key={movie.id} movie={movie} movieOnPreview={movieOnPreview}>
+              {movie.title}
+            </Btn>
           )
         })}
-      </ul>
+      </div>
     </>
   )
 }

@@ -25,7 +25,7 @@ function App() {
         <MovieList movieOnPreview={movieOnPreview} />
       </SideNav>
       <MainBody>
-        <MoviePreview movieOnPreview={movie} />
+        <MoviePreview onPreview={movie} />
       </MainBody>
     </>
   )
