@@ -13,6 +13,7 @@ import './App.css'
 function App() {
   const [movie, setMovie] = useState({})
   const movieOnPreview = (item) => {
+    console.log(item)
     setMovie(item)
   }
 
