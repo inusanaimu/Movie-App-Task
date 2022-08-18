@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '../UI/Card'
 import BackDrop from '../UI/BackDrop'
+import classes from './MoviePreview.module.css'
 
 const MoviePreview = ({ onPreview }) => {
   const {
@@ -18,12 +19,17 @@ const MoviePreview = ({ onPreview }) => {
   }
 
   return (
-    <div>
-      <BackDrop url={url}>{/* <Image /> */}</BackDrop>
+    <>
+      <BackDrop url={url} />
       <Card>
         <h1> {title}</h1>
+        <div>
+          <h2>Overview:</h2>
+          <span>{overview}</span>
+        </div>
+        <Image />
       </Card>
-    </div>
+    </>
   )
 }
 

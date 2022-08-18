@@ -9,8 +9,9 @@ const Btn = (props) => {
         movieOnPreview(movie)
       }}
       className={classes.btn}
+      style={{ verticalAlign: 'middle' }}
     >
-      {movie.title}
+      <span>{movie.title} </span>
     </button>
   )
 }
