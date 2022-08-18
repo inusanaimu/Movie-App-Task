@@ -7,14 +7,15 @@
   text-align: left;
   font-size: 1rem;
   width: 150px;
-  transition: all 0.5s;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
 .btn:hover {
   border-color: rgb(255, 140, 0);
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.126);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .btn span {
   cursor: pointer;

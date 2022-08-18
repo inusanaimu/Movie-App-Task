@@ -8,11 +8,11 @@ const movies = data
 const MovieList = ({ movieOnPreview }) => {
   useEffect(() => {
     movieOnPreview(movies[0])
-  }, [0])
+  }, [])
 
   return (
     <>
-      <div> Movie List</div>
+      <h4> Movie List</h4>
       <div>
         {movies.map((movie) => {
           return (

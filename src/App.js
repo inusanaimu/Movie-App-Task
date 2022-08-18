@@ -7,6 +7,7 @@ import MainBody from './Components/Layout/MainBody'
 
 import MovieList from './Components/Logic/MovieList'
 import MoviePreview from './Components/Logic/MoviePreview'
+import Search from './Components/Logic/Search'
 
 import './App.css'
 
@@ -20,7 +21,9 @@ function App() {
   return (
     <>
       {/* {console.log(data)} */}
-      <Header> Movie App</Header>
+      <Header>
+        <h2>Movie App</h2> <Search />
+      </Header>
       <SideNav>
         <MovieList movieOnPreview={movieOnPreview} />
       </SideNav>
