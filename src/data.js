@@ -256,7 +256,7 @@ const data = [
   },
   {
     adult: false,
-    backdrop_path: null,
+    backdrop_path: '/2DyEk84XnbJEdPlGF43crxfdtHH.jpg',
     genre_ids: [28, 80],
     id: 385687,
     original_language: 'en',

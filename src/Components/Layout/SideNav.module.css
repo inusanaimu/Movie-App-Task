@@ -5,4 +5,5 @@
   background-color: rgba(red, green, blue, 0.2);
   float: left;
   z-index: 10;
+  overflow-y: hidden;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import data from './data'
+import data from './data'
 
 import Header from './Components/Layout/Header'
 import SideNav from './Components/Layout/SideNav'
@@ -10,6 +10,8 @@ import MoviePreview from './Components/Logic/MoviePreview'
 import Search from './Components/Logic/Search'
 
 import './App.css'
+
+const movies = data
 
 function App() {
   const [movie, setMovie] = useState({})
@@ -22,10 +24,11 @@ function App() {
     <>
       {/* {console.log(data)} */}
       <Header>
-        <h2>Movie App</h2> <Search />
+        <h2>Movie App</h2>
+        <Search movies={movies} movieOnPreview={movieOnPreview} />
       </Header>
       <SideNav>
-        <MovieList movieOnPreview={movieOnPreview} />
+        <MovieList movies={movies} movieOnPreview={movieOnPreview} />
       </SideNav>
       <MainBody>
         <MoviePreview onPreview={movie} />
