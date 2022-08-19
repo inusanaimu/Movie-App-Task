@@ -5,7 +5,8 @@ const handleClick = (arr) => {
   if (value.trim() === '') return
   console.log(value.length)
   const avai = arr.filter((item) => {
-    if (item.toLowerCase().includes(value)) {
+    let title = item.title.toLowerCase()
+    if (title.includes(value)) {
       return item
     }
     return undefined
@@ -15,7 +16,6 @@ const handleClick = (arr) => {
 
 const Search = ({ movies, movieOnPreview }) => {
   const [searchResult, setSearchResult] = useState(false)
-  const titleArray = movies.map((movie) => movie.title)
 
   return (
     <div>
@@ -25,7 +25,7 @@ const Search = ({ movies, movieOnPreview }) => {
         id='search'
         placeholder='Search'
         onChange={() => {
-          handleClick(titleArray)
+          handleClick(movies)
         }}
       />
       <button
