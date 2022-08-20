@@ -4,7 +4,7 @@ const Btn = (props) => {
   const { movieOnPreview, movie } = props
 
   return (
-    <button
+    <li
       onClick={() => {
         movieOnPreview(movie)
       }}
@@ -12,7 +12,7 @@ const Btn = (props) => {
       style={{ verticalAlign: 'middle' }}
     >
       <span>{movie.title} </span>
-    </button>
+    </li>
   )
 }
 

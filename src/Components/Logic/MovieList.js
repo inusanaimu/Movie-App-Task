@@ -14,13 +14,15 @@ const MovieList = ({ movies, movieOnPreview }) => {
         Movie List
       </h2>
       <div>
-        {movies?.map((movie) => {
-          return (
-            <Btn key={movie.id} movie={movie} movieOnPreview={movieOnPreview}>
-              {movie.title}
-            </Btn>
-          )
-        })}
+        <ul>
+          {movies?.map((movie) => {
+            return (
+              <Btn key={movie.id} movie={movie} movieOnPreview={movieOnPreview}>
+                {movie.title}
+              </Btn>
+            )
+          })}
+        </ul>
       </div>
     </>
   )
