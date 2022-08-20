@@ -8,7 +8,7 @@ const Span = (props) => {
       onClick={() => {
         movieOnPreview(movie)
       }}
-      className={classes.btn}
+      className={classes.list}
       style={{ verticalAlign: 'middle' }}
     >
       <span>{movie.title} </span>
