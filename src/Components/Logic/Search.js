@@ -24,7 +24,7 @@ const Search = ({ movies, movieOnPreview }) => {
   }
 
   const handleBlur = () => {
-    // setSearchResult([])
+    setSearchResult([])
   }
 
   return (
