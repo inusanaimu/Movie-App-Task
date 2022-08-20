@@ -6,3 +6,10 @@
   list-style: none;
   position: relative;
 }
+
+.headerTitle {
+  font-size: 2rem;
+  margin: 5px;
+  margin-left: 0;
+  display: flex;
+}

@@ -1,24 +1,34 @@
 import React, { useState } from 'react'
 
-const handleClick = (arr) => {
-  const value = document.getElementById('search').value.toLowerCase()
-  if (value.trim() === '') return
-  console.log(value.length)
-  const avai = arr.filter((item) => {
-    let title = item.title.toLowerCase()
-    if (title.includes(value)) {
-      return item
-    }
-    return undefined
-  })
-  console.log(avai)
-}
+import ResultList from './ResultList'
+import classes from './Search.module.css'
 
 const Search = ({ movies, movieOnPreview }) => {
-  const [searchResult, setSearchResult] = useState(false)
+  const [searchResult, setSearchResult] = useState([])
+  let available = []
+
+  const handleClick = (arr) => {
+    const value = document.getElementById('search').value.toLowerCase()
+    if (value.trim() === '') {
+      setSearchResult([])
+      return
+    }
+    available = arr.filter((item) => {
+      let title = item.title.toLowerCase()
+      if (title.includes(value)) {
+        return item
+      }
+      return undefined
+    })
+    setSearchResult(available)
+  }
+
+  const handleBlur = () => {
+    setSearchResult([])
+  }
 
   return (
-    <div>
+    <div className={classes.parent}>
       <input
         type='search'
         name=''
@@ -26,6 +36,9 @@ const Search = ({ movies, movieOnPreview }) => {
         placeholder='Search'
         onChange={() => {
           handleClick(movies)
+        }}
+        onBlur={() => {
+          handleBlur()
         }}
       />
       <button
@@ -36,6 +49,9 @@ const Search = ({ movies, movieOnPreview }) => {
       >
         Search
       </button>
+      <div className={classes.searchResult}>
+        <ResultList movieOnPreview={movieOnPreview} movies={searchResult} />
+      </div>
     </div>
   )
 }

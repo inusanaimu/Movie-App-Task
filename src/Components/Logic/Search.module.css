@@ -1,0 +1,6 @@
+.parent {
+  position: relative;
+}
+.searchResult {
+  z-index: 50;
+}
