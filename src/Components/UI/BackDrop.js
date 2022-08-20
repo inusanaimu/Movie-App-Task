@@ -7,7 +7,6 @@ const BackDrop = ({ url, children }) => {
       className={classes.backDrop}
       style={{ backgroundImage: `url(${url})` }}
     >
-      {url}
       {children}
     </div>
   )
