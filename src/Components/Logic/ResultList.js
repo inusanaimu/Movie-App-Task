@@ -1,7 +1,7 @@
 import React from 'react'
 import Span from '../UI/Span'
 
-const ResultList = ({ movies, movieOnPreview }) => {
+const ResultList = ({ clearResult, movies, movieOnPreview }) => {
   return (
     <ul>
       {movies.map((movie) => {
@@ -11,6 +11,7 @@ const ResultList = ({ movies, movieOnPreview }) => {
               <Span
                 key={movie.id}
                 movie={movie}
+                clearResult={clearResult}
                 movieOnPreview={movieOnPreview}
               >
                 {movie.title}

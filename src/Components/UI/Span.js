@@ -1,12 +1,13 @@
 import classes from './Span.module.css'
 
 const Span = (props) => {
-  const { movieOnPreview, movie } = props
+  const { clearResult, movieOnPreview, movie } = props
 
   return (
     <span
       onClick={() => {
         movieOnPreview(movie)
+        clearResult()
       }}
       className={classes.list}
       style={{ verticalAlign: 'middle' }}

@@ -23,8 +23,15 @@ const Search = ({ movies, movieOnPreview }) => {
     setSearchResult(available)
   }
 
-  const handleBlur = () => {
+  const clearResult = () => {
     setSearchResult([])
+  }
+
+  const handleBlur = () => {
+    const value = document.getElementById('search').value
+    if (value.trim() === '') {
+      clearResult()
+    }
   }
 
   return (
@@ -43,14 +50,18 @@ const Search = ({ movies, movieOnPreview }) => {
       />
       <button
         type='button'
-        // onClick={() => {
-        //   handleClick(titleArray)
-        // }}
+        onClick={() => {
+          handleClick(movies)
+        }}
       >
         Search
       </button>
       <div className={classes.searchResult}>
-        <ResultList movieOnPreview={movieOnPreview} movies={searchResult} />
+        <ResultList
+          clearResult={clearResult}
+          movieOnPreview={movieOnPreview}
+          movies={searchResult}
+        />
       </div>
     </div>
   )
