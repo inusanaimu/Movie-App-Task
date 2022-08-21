@@ -4,8 +4,14 @@ import BackDrop from '../UI/BackDrop'
 import classes from './MoviePreview.module.css'
 
 const MoviePreview = ({ onPreview }) => {
-  const { title, backdrop_path, original_language, overview, release_date } =
-    onPreview
+  const {
+    title,
+    backdrop_path,
+    original_language,
+    overview,
+    vote_average,
+    release_date,
+  } = onPreview
 
   const url = `https://image.tmdb.org/t/p/w300${backdrop_path}`
   const Image = () => {
@@ -13,7 +19,7 @@ const MoviePreview = ({ onPreview }) => {
   }
 
   return (
-    <>
+    <div className={classes.body}>
       <BackDrop url={url} />
       <Card>
         <h1> {title}</h1>
@@ -32,8 +38,12 @@ const MoviePreview = ({ onPreview }) => {
           <h3 className={classes.overview}>Release Date:- </h3>
           <span>{release_date}</span>
         </article>
+        <article>
+          <h3 className={classes.overview}>Rating:- </h3>
+          <span>{vote_average}</span>
+        </article>
       </Card>
-    </>
+    </div>
   )
 }
 

@@ -1,7 +1,12 @@
+.body {
+  position: relative;
+}
 .overview {
   display: inline;
 }
 
 .image {
   border: 4px #000 solid;
+  max-height: 300px;
+  margin: 4px auto;
 }
