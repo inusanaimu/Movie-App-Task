@@ -6,7 +6,7 @@ import Btn from '../UI/Btn'
 
 const MovieList = ({ movies, movieOnPreview }) => {
   useEffect(() => {
-    movieOnPreview(movies[0])
+    movieOnPreview(movies[Math.floor(Math.random() * 20)])
   }, [])
 
   return (
