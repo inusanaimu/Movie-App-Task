@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from '../UI/Card'
 import BackDrop from '../UI/BackDrop'
-import classes from './MoviePreview.module.css'
 
 const MoviePreview = ({ onPreview }) => {
   const {
@@ -15,31 +14,31 @@ const MoviePreview = ({ onPreview }) => {
 
   const url = `https://image.tmdb.org/t/p/w300${backdrop_path}`
   const Image = () => {
-    return <img className={classes.image} src={url} alt={title} />
+    return <img src={url} alt={title} />
   }
 
   return (
-    <div className={classes.body}>
+    <div>
       <BackDrop url={url} />
       <Card>
         <h1> {title}</h1>
         <article>
           <Image />
           <article>
-            <h2 className={classes.overview}>Overview: </h2>
+            <h2>Overview: </h2>
             <span>{overview}</span>
           </article>
         </article>
         <article>
-          <h3 className={classes.overview}>Language:- </h3>
+          <h3>Language:- </h3>
           <span>{original_language}</span>
         </article>
         <article>
-          <h3 className={classes.overview}>Release Date:- </h3>
+          <h3>Release Date:- </h3>
           <span>{release_date}</span>
         </article>
         <article>
-          <h3 className={classes.overview}>Rating:- </h3>
+          <h3>Rating:- </h3>
           <span>{vote_average}</span>
         </article>
       </Card>

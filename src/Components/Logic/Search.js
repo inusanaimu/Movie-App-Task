@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 import ResultList from './ResultList'
-import classes from './Search.module.css'
 
 const Search = ({ movies, movieOnPreview }) => {
   const [searchResult, setSearchResult] = useState([])
@@ -35,7 +34,7 @@ const Search = ({ movies, movieOnPreview }) => {
   }
 
   return (
-    <div className={classes.parent}>
+    <div>
       <input
         type='search'
         name=''
@@ -56,7 +55,7 @@ const Search = ({ movies, movieOnPreview }) => {
       >
         Search
       </button>
-      <div className={classes.searchResult}>
+      <div>
         <ResultList
           clearResult={clearResult}
           movieOnPreview={movieOnPreview}

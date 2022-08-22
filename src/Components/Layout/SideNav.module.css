@@ -1,9 +1,0 @@
-.sideNav {
-  padding: 2rem 2rem;
-  width: 30%;
-  max-width: 200px;
-  background-color: rgba(red, green, blue, 0.2);
-  float: left;
-  z-index: 10;
-  overflow-y: hidden;
-}

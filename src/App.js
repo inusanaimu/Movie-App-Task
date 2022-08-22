@@ -22,9 +22,7 @@ function App() {
 
   return (
     <>
-      {/* {console.log(data)} */}
       <Header>
-        <h2 className='headerTitle'>Movie App</h2>
         <Search movies={movies} movieOnPreview={movieOnPreview} />
       </Header>
       <SideNav>

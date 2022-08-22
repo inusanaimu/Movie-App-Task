@@ -1,9 +1,13 @@
 import React from 'react'
 
-import clasess from './Header.module.css'
-
 const Header = (props) => {
-  return <header className={clasess.header}>{props.children}</header>
+  return (
+    <header className=' m-6 text-center  '>
+      {' '}
+      <h2>Movie App</h2>
+      {props.children}
+    </header>
+  )
 }
 
 export default Header

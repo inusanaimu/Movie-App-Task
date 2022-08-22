@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
 
-import classes from './MovieList.module.css'
-
 import Btn from '../UI/Btn'
 
 const MovieList = ({ movies, movieOnPreview }) => {
@@ -10,8 +8,8 @@ const MovieList = ({ movies, movieOnPreview }) => {
   }, [])
 
   return (
-    <div className={classes.main}>
-      <h2 style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', color: 'white' }}>
+    <div>
+      <h2 style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>
         {' '}
         Movie List
       </h2>
