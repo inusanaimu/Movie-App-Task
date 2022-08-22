@@ -13,8 +13,8 @@
 .list:hover {
   border-color: rgb(255, 140, 0);
   cursor: pointer;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: #000;
+  background-color: rgb(255, 240, 204);
 }
 .list span {
   cursor: pointer;

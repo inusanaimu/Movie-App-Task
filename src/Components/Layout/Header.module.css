@@ -8,9 +8,6 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(2px);
-}
-
-.headerTitle {
-  color: blue;
+  backdrop-filter: blur(4px);
+  align-content: center;
 }
