@@ -58,11 +58,15 @@ const Search = ({ movies, movieOnPreview }) => {
         Search
       </button>
       <div>
-        <ResultList
-          clearResult={clearResult}
-          movieOnPreview={movieOnPreview}
-          movies={searchResult}
-        />
+        {searchResult.length ? (
+          <ResultList
+            clearResult={clearResult}
+            movieOnPreview={movieOnPreview}
+            movies={searchResult}
+          />
+        ) : (
+          ''
+        )}
       </div>
     </div>
   )

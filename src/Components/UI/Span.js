@@ -3,6 +3,7 @@ const Span = (props) => {
 
   return (
     <span
+      className=' w-full block'
       onClick={() => {
         movieOnPreview(movie)
         clearResult()
