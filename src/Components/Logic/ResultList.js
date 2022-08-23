@@ -3,7 +3,7 @@ import Span from '../UI/Span'
 
 const ResultList = ({ clearResult, movies, movieOnPreview }) => {
   return (
-    <ul>
+    <ul className=' absolute rounded-md my-2 mx-2 z-20 bg-gray-100 '>
       {movies.map((movie) => {
         return (
           <>

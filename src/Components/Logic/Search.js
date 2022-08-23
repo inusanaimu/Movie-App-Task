@@ -34,7 +34,7 @@ const Search = ({ movies, movieOnPreview }) => {
   }
 
   return (
-    <div className=' m-auto '>
+    <div className=' m-auto relative '>
       <input
         className=' mx-2 bg-slate-200 px-3 py-1 align-bottom rounded-md '
         type='search'

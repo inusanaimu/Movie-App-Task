@@ -21,17 +21,17 @@ function App() {
   }
 
   return (
-    <>
+    <div className='relative'>
       <Header>
         <Search movies={movies} movieOnPreview={movieOnPreview} />
       </Header>
+      <MainBody>
+        <MoviePreview onPreview={movie} />
+      </MainBody>
       <SideNav>
         <MovieList movies={movies} movieOnPreview={movieOnPreview} />
       </SideNav>
-      {/* <MainBody>
-        <MoviePreview onPreview={movie} />
-      </MainBody> */}
-    </>
+    </div>
   )
 }
 
