@@ -1,5 +1,3 @@
-import classes from './Span.module.css'
-
 const Span = (props) => {
   const { clearResult, movieOnPreview, movie } = props
 
@@ -9,8 +7,6 @@ const Span = (props) => {
         movieOnPreview(movie)
         clearResult()
       }}
-      className={classes.list}
-      style={{ verticalAlign: 'middle' }}
     >
       <span>{movie.title} </span>
     </span>
