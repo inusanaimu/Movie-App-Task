@@ -9,10 +9,7 @@ const MovieList = ({ movies, movieOnPreview }) => {
 
   return (
     <div>
-      <h2 style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>
-        {' '}
-        Movie List
-      </h2>
+      <h2> Movie List</h2>
       <div>
         <ul>
           {movies?.map((movie) => {

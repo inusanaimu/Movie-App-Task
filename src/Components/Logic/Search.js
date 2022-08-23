@@ -34,8 +34,9 @@ const Search = ({ movies, movieOnPreview }) => {
   }
 
   return (
-    <div>
+    <div className=' m-auto '>
       <input
+        className=' ml-2 bg-slate-200 px-3 align-bottom rounded-md '
         type='search'
         name=''
         id='search'
@@ -48,6 +49,7 @@ const Search = ({ movies, movieOnPreview }) => {
         }}
       />
       <button
+        className=' ml-2 bg-slate-200 px-3 rounded-md align-bottom '
         type='button'
         onClick={() => {
           handleClick(movies)
