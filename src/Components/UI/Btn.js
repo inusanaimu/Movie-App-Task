@@ -39,10 +39,10 @@ const Btn = (props) => {
           <span className=' '>Rating:- </span>
           {vote_average}
         </h5>
-        <details className='text-sm font-normal '>
+        {/* <details className='text-sm font-normal '>
           <span className=' '>Overview:- </span>
           {overview}
-        </details>
+        </details> */}
       </div>
     </div>
   )
