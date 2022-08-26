@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useCallback } from 'react'
 
 import Btn from '../UI/Btn'
 
 const MovieList = ({ movies, movieOnPreview }) => {
-  useEffect(() => {
+  const selectMovie = useCallback(() => {
     movieOnPreview(movies[Math.floor(Math.random() * 20)])
-  }, [])
+  }, [movies, movieOnPreview])
+
+  useEffect(() => {
+    selectMovie()
+  }, [selectMovie])
 
   return (
     <div className=' max-w-5xl m-auto w-full md:w-4/5 px-4 py-4'>

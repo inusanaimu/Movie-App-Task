@@ -4,7 +4,6 @@ const Btn = (props) => {
     title,
     backdrop_path,
     original_language,
-    overview,
     vote_average,
     release_date,
   } = movie

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import data from './data'
 
 import Header from './Components/Layout/Header'
@@ -15,10 +15,10 @@ const movies = data
 
 function App() {
   const [movie, setMovie] = useState({})
-  const movieOnPreview = (item) => {
+  const movieOnPreview = useCallback((item) => {
     console.log(item)
     setMovie(item)
-  }
+  }, [])
 
   return (
     <div className='relative'>
