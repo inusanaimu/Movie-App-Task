@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from 'react'
 
-import Btn from '../UI/Btn'
+import MovieCard from '../UI/MovieCard'
 
 const MovieList = ({ movies, movieOnPreview }) => {
   const selectMovie = useCallback(() => {
@@ -19,9 +19,13 @@ const MovieList = ({ movies, movieOnPreview }) => {
       <div className=' grid md:grid-cols-3 grid-cols-2 gap-2 content-evenly justify-items-stretch'>
         {movies?.map((movie) => {
           return (
-            <Btn key={movie.id} movie={movie} movieOnPreview={movieOnPreview}>
+            <MovieCard
+              key={movie.id}
+              movie={movie}
+              movieOnPreview={movieOnPreview}
+            >
               {movie.title}
-            </Btn>
+            </MovieCard>
           )
         })}
       </div>

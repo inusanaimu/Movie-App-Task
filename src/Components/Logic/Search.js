@@ -27,16 +27,18 @@ const Search = ({ movies, movieOnPreview }) => {
   }
 
   const handleBlur = () => {
-    const value = document.getElementById('search').value
-    if (value.trim() === '') {
+    let value = document.getElementById('search')
+    if (value.value.trim() === '') {
       clearResult()
+    } else {
+      value.value = ''
     }
   }
 
   return (
     <div className=' m-auto relative '>
       <input
-        className=' mx-2 bg-slate-200 px-3 py-1 align-bottom rounded-md '
+        className=' w-20 md:w-40 mx-1 md:mx-2 bg-slate-200 px-2 md:px-3 py-1 align-bottom rounded-md '
         type='search'
         name='search'
         id='search'
