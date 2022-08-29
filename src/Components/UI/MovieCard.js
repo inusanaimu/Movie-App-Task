@@ -5,6 +5,7 @@ const MovieCard = (props) => {
     backdrop_path,
     original_language,
     vote_average,
+    overview,
     release_date,
   } = movie
 
@@ -21,9 +22,9 @@ const MovieCard = (props) => {
     >
       <div
         style={{ backgroundImage: `url(${url})` }}
-        className=' absolute w-full h-full bg-no-repeat bg-center rounded-xl '
+        className='  absolute w-full h-full bg-no-repeat bg-cover rounded-xl '
       ></div>
-      <div className=' overflow-auto py-2 px-3 w-full h-full bg-black opacity-20 hover:opacity-95 hover:cursor-pointer rounded-xl text-white border'>
+      <div className=' overflow-hidden py-2 px-3 w-full h-full bg-black opacity-20 hover:opacity-95 hover:cursor-pointer rounded-xl text-white border'>
         <h3 className='text-lg font-bold '>{title}</h3>
         <h5 className='text-sm font-normal'>
           <span className=' '>Release Date:- </span>
@@ -37,10 +38,10 @@ const MovieCard = (props) => {
           <span className=' '>Rating:- </span>
           {vote_average}
         </h5>
-        {/* <details className='text-sm font-normal '>
+        {/* <h5 className='text-sm font-normal '>
           <span className=' '>Overview:- </span>
           {overview}
-        </details> */}
+        </h5> */}
       </div>
     </div>
   )
